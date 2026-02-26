@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+     <head>
+        <meta charset="UTF-8">
+         <link rel="stylesheet" href="style.css">
+    </head>
+    
+   <body>
+          <header class="navbar">
+
+            <img src="logo.png" alt="Logo Isabel Motta" class="Logo">
+
+            <div class="brand-text">
+                <span class="name"><br>Isabel Motta</span>
+                <span class="dev">| Dev Tech</span>
+            </div>
+            </header>
+
+            <main class="container">
+
+                <section class="boas-vindas">
+                    <h1>Gestor de Hidratação Terapêutico</h1>
+                    <p>Acompanhe sua rotina de cuidado e bem-estar.</p>
+                </section>
+
+                <section class="dashboard">
+                      <div class="card">
+                      <h3>Total de Itens</h3>
+                      <p id="total-itens">0</p>
+                      </div>
+                   <div class="card">
+                   <h3>Última Atualização</h3>
+                   <p id="data-atualizacao">--/--/--</p>
+             </div>
+               </section>
+
+                     <div class="contador-box">
+
+                    <h2 id="display-tempo" style="font-size: 3rem; color: #556b2f; margin: 20px 0;">00:00:00</h2>
+                    <button class="btn-principal" onclick="toggleCronometro()" id="btn-controle">Iniciar Novo Ciclo</button>
+                    <button class="btn-principal" onclick="registrarConcluido()">Concluir Ciclo</button>
+
+                   </div>
+
+                <section class="history-container">
+                   <h2><i class="fas fa-history"></i> Histórico de Atividade</h2>
+                   <ul id="lista-historico">
+                   <li class="empty-msg">Nenhum ciclo concluído ainda.</li>
+                   </ul>
+                <button id="btn-limpar" onclick="limparHistorico()">Limpar Histórico</button>
+               </section>
+
+            </main>
+
+         <audio id="alert-sound" src="https://www.soundjay.com/buttons/beep-01a.mp3" preload="auto"></audio> 
+
+         <script src="script.js"></script>
+
+         </body>
+     </html>
